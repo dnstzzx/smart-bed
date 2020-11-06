@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+
+
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+
+        <com.google.android.material.appbar.AppBarLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="30dp">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true">
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/yes"
+                        android:id="@+id/img_state"
+                        android:layout_weight="1"/>
+                <TextView
+                        android:id="@+id/label_state"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="一切安好"
+                        android:textSize="30dp"
+                        android:gravity="center">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginVertical="30dp">
+
+            <TextView
+
+                    android:text="25 ℃"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/label_temperature"
+                    android:layout_weight="1"
+                    android:textSize="50dp"
+                    android:gravity="center" />
+
+            <View
+                    android:id="@+id/divider2"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider" />
+
+            <TextView
+                    android:text="60 %"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/label_humidity"
+                    android:layout_weight="1"
+                    android:textSize="50dp"
+                    android:gravity="center" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:padding="10dp">
+
+
+                <Switch
+                        android:text="安全警报  "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/switch_Alarm"
+                        android:layout_weight="1"
+                        android:textSize="25dp"
+                        android:layout_marginBottom="20dp"
+                        android:checked="false"
+                        android:clickable="true" />
+
+                <Switch
+                        android:text="踢被检测  "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/switch_detect_quilt_out"
+                        android:layout_weight="1"
+                        android:textSize="25dp"
+                        android:checked="true"
+                        android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="60dp"
+                    android:scaleType="center"
+                    android:scaleX="1.3"
+                    android:scaleY="1.3"
+                    android:id="@+id/button_openVideo"
+                    android:src="@android:drawable/ic_media_play" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
